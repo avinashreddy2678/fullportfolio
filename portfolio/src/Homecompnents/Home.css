@@ -1,0 +1,69 @@
+.formargine {
+  margin-left: 20%;
+  height: 100%;
+  width: 78vw;
+}
+
+.header {
+  text-align: end;
+  width: 79%;
+  height: 10vh;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  background-color: #14131a;
+}
+.images {
+  height: 23vh;
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaIa8e8kG39oyHMxxbK05qoeAMS_-NESBtBH6Fj4TR7rax_R16");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 10vh;
+  display: flex;
+  padding: 0 5%;
+  align-items: center;
+  justify-content: space-between;
+}
+.img-left {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+@media screen and (max-width: 810px) {
+  .contactinfo {
+    display: none;
+  }
+  .insta-info {
+    display: none;
+  }
+}
+@media screen and (max-width: 510px) {
+  .img-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto 0;
+    justify-content: center;
+    padding-top: 1%;
+    /* margin-top: 5%; */
+
+    text-align: center;
+  }
+  img {
+    height: 90px;
+    width: 90px;
+    margin: auto;
+  }
+  .nameall {
+    margin-top: 1%;
+  }
+  .nameall h2 {
+    font-size: medium;
+  }
+  .name {
+    display: none;
+  }
+}

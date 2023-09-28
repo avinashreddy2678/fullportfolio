@@ -1,0 +1,40 @@
+.project {
+  /* max-width: 87%;margin: auto; */
+  padding: 0 4%;
+  position: relative;
+  top: 10vh;
+}
+.button {
+  height: 50px;
+  /* width: 5%; */
+  margin: 20px;
+}
+.socail-project{
+  padding: 0 4%;
+  font-size: regular;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: 	#aaa7a7;
+}
+.all-media {
+  margin-top: 4%;
+}
+.contact{
+ width: 30vw;
+  text-align: center;
+  padding: 4%;
+}
+@media screen and (max-width: 993px) {
+  .contact{
+    width: 50vw;
+     text-align: center;
+     padding: 4%;
+   }
+}
+@media screen and (max-width: 693px) {
+    .contact{
+      width: 70vw;
+       text-align: center;
+       padding: 4%;
+     }
+ }

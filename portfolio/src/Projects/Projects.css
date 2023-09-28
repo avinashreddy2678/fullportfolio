@@ -1,0 +1,28 @@
+.singlepost {
+    display: flex;
+    margin: 4%;
+    
+  }
+  .singleproject{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left:3% ; 
+  }
+
+
+
+
+  
+  @media screen and (max-width: 620px) {
+    .singleproject {
+        display: block;
+        margin: 10%;
+        /* width: 100%; */
+        font-size: small;
+      }
+      .singlepost {
+        display: flex;
+        margin: 10%;
+        flex-wrap: wrap;
+      }
+   }

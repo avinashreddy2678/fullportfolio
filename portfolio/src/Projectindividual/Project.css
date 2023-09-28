@@ -1,0 +1,63 @@
+.projectimage {
+  width: 20vw;
+  cursor: pointer;
+}
+.projectimage img {
+  width: 20vw;
+}
+.custom-shadow {
+  box-shadow: 0 2px 2px rgba(240, 240, 240, 0.5);
+}
+.projectone {
+  max-width: 20vw;
+  height: 100%;
+  border-radius: 2%;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  color: #aaa7a7;
+  margin-left: 2%;
+}
+.h {
+  color: #aaa7a7;
+}
+@media screen and (max-width: 1010px) {
+  .projectone {
+    max-width: 30vw;
+    height: 100%;
+    border-radius: 2%;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    color: #aaa7a7;
+  }
+  .projectimage {
+    width: 30vw;
+    cursor: pointer;
+  }
+  .projectimage img {
+    width: 30vw;
+  }
+  .projectoveriew {
+    font-size: small;
+  }
+}
+@media screen and (max-width: 620px) {
+  .projectone {
+    max-width: 50vw;
+    height: 100%;
+    border-radius: 2%;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    color: #aaa7a7;
+    
+  }
+  .projectimage {
+    width: 50vw;
+    cursor: pointer;
+  }
+  .projectimage img {
+    width: 50vw;
+  }
+  .projectoveriew {
+    font-size: small;
+  }
+}

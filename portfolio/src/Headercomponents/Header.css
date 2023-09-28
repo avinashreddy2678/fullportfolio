@@ -1,0 +1,54 @@
+.sidebar {
+  position: fixed;
+  z-index: 200;
+  width: 17%;
+  height: 93vh;
+  margin: 0;
+  padding: 0;
+  background-color: #1c1b22;
+  margin: 2%;
+}
+.title {
+  padding: 1% 3%;
+  font-family: Billabong;
+  background-color: #14131A;
+}
+.navbars ul {
+  padding: 2% 3%;
+}
+.navbars ul li {
+  list-style: none;
+  cursor: pointer;
+  padding: 3% 19%;
+  margin: 10% 0;
+  font-size: regular;
+  font-family: 'Montserrat', sans-serif;
+  color: 	#6c6a6a;
+}
+.navbars ul a:focus {
+  font-weight: normal;
+}
+.navbars ul li:hover {
+    background-color: #212027;
+  border-radius: 5%;
+  color: 	rgb(243, 243, 243);
+}
+@media screen and (max-width: 1210px) {
+  .navbars ul li{
+   font-size:small;
+  }
+ }
+ @media screen and (max-width: 1050px) {
+  .navbars ul li{
+   font-size:xx-small;
+  }
+ }
+ @media screen and (max-width: 893px) {
+  .navbars ul li{
+    text-align: center;
+    margin-bottom: 30%;
+  }
+  .navbars ul li span{
+   display: none;
+  }
+ }
