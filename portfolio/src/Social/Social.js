@@ -115,7 +115,8 @@ function Social() {
               onChange={(e)=>{setmessage(e.target.value)}}
             />
           </div>
-          <button type="submit" class="btn btn-primary">
+          <p className="mt-4">Note: If you Really Want to contact Me Msg me until you get an Alert</p>
+          <button type="submit" className=" mt-2 btn btn-primary">
             Submit
           </button>
         </form>

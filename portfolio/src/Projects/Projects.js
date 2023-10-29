@@ -6,6 +6,13 @@ function Projects() {
   const data = [
     {
       imageurl:
+      "./assets/five.png",
+    name: "Receipe_book",
+    overview:"A Dynamic web application built with using Technologies MERN. Can help for Making new Receipes and to post them in public .The Logged in user can write,Like,Save and view others Receipes the others added ",
+    live:"https://receipebook26.netlify.app"
+    },
+    {
+      imageurl:
         "./assets/four.png",
       name: "Daily-Blogs",
       overview:"A Dynamic web application built with using Technologies MERN (mongodb Express.js React.js Node.js) .In This we have Features Like User Authentication, Create, Edit & Delete Postsand Find the Posts posted by the User Who Logged in.",
@@ -26,13 +33,8 @@ function Projects() {
       live:"https://randomquotebyavin.netlify.app/"
       
     },
-    {
-      imageurl:
-        "./assets/two.png",
-      name: "Food-Findare",
-      overview:"A website which lists down food items and allows you to add cart and display theitems in the cart component and remove the items from cart. Using React redux",
-      live:"https://foodfindare26.netlify.app"
-    },
+   
+
   ];
   const fronttechdata = [
     {

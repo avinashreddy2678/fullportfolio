@@ -5,8 +5,9 @@ function About() {
     <div className="formargine text-white" id="about">
       <div className="myabout py-3">
       <h1 className="pt-5">About</h1>
-      <p>Hello! I'm Avinash, a passionate web developer with a flair for turning ideas into interactive and user-friendly websites. With a strong foundation in web development technologies and a keen eye for design, I'm dedicated to creating web experiences that not only look great but also function seamlessly.
-      <br />I've spent one and half years honing my skills in web development, working on a diverse range of projects.
+      <p>Hello! I'm Avinash, a web developer with a passion for transforming ideas into engaging and user-friendly websites. With a solid foundation in web development technologies, I'm committed to developing web experiences that not only look good but also work well.
+
+      <br />I've spent a year and a half improving my web development skills by working on a variety of projects.
       </p>
       </div>
      
