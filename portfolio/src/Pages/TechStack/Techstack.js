@@ -1,12 +1,14 @@
-import React from "react";
-// import SingleProject from "../SingleProject/SingleProject";
+import React, { useEffect } from "react";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import TechCard from "./TechCard";
-import { Card } from "../UI/TechUI";
+import { Card } from "../..//UI/TechUI";
 import Marquee from "react-fast-marquee";
-// import TechCard from "./TechCard";
 
 const Techstack = () => {
+  
+  useEffect(()=>{
+    document.title=`Tech`
+  },[]);
   const fronttechdata = [
     {
       imageurl:
@@ -103,7 +105,7 @@ const Techstack = () => {
           {/* prgoramming langugae */}
           <Card>
             <div>
-              <div className="text-xl ml-4 font-bold text-gray-500">
+                <div className="text-xl ml-4 font-bold text-gray-500">
                 Programming Languages
               </div>
               <div className="grid sm:grid md:grid-cols-2 lg:grid-cols-2 gap-6">
@@ -117,7 +119,7 @@ const Techstack = () => {
           </Card>
 
           {/* front end  */}
-          <Card className="mt-4">
+          <Card className="mt-4 ">
             <div>
               <div className="text-xl ml-4 font-bold text-gray-500">
                 Front End

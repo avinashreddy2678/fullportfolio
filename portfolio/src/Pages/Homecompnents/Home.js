@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import { useNavigate } from "react-router-dom";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
-import About from "../About/About";
+import About from "../../About/About";
 import DownloadIcon from "@mui/icons-material/Download";
 import HomeCard from "./HomeCard";
 import HomeTech from "./HomeTech";
@@ -11,6 +11,10 @@ import GitHub from "@mui/icons-material/GitHub";
 import LinkedIn from "@mui/icons-material/LinkedIn";
 function Home() {
   const router = useNavigate();
+  useEffect(()=>{
+    document.title=`Avinash's`
+  },[]);
+  
   const data = [
     {
       createdAt: "12:00",
@@ -117,7 +121,7 @@ function Home() {
           </div>
           <div className="pt-12 hidden lg:block px-24">
               <button
-              className="button btn btn-dark px-3"
+              className="button btn text-white px-3"
               onClick={() => {
                 window.open("https://github.com/avinashreddy2678", "_blank");
               }}
@@ -125,7 +129,7 @@ function Home() {
               <GitHub />
             </button>
             <button
-              className="button btn btn-dark px-3"
+              className="button btn text-white px-3"
               onClick={() => {
                 window.open(
                   "https://www.linkedin.com/in/avinash-mamidi-2687782i/",

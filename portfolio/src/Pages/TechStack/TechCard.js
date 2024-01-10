@@ -1,7 +1,6 @@
 import React from "react";
-import { Card } from "../UI/TechUI";
-import { Progress } from "../UI/Progress";
-
+import {Card } from '../../UI/TechUI'
+import {Progress} from '../../UI/Progress'
 const TechCard = ({ item }) => {
   return (
     <>

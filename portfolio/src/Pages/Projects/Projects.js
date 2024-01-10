@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
-import Project from "../Projectindividual/Project";
+import Project from "../../Projectindividual/Project";
 import "./Projects.css";
 function Projects() {
+  useEffect(()=>{
+    document.title=`Projects`
+  },[]);
   const next = [
     {
       imageurl1: "./assets/ai2.png",

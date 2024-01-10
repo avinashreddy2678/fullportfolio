@@ -3,12 +3,13 @@ import "./App.css";
 import Header from "./Headercomponents/Header";
 import {Routes} from 'react-router-dom';
 import {Route} from 'react-router-dom'
-import Home from "./Homecompnents/Home";
-import About from "./About/About";
-import Projects from "./Projects/Projects";
+import Home from "./Pages/Homecompnents/Home";
+
+import Projects from "./Pages/Projects/Projects";
 import Social from "./Social/Social";
-import Techstack from "./TechStack/Techstack";
-import Contact from "./Contact/Contact";
+
+import Contact from "./Pages/Contact/Contact";
+import Techstack from "./Pages/TechStack/Techstack";
 
 function App() {
   return (
