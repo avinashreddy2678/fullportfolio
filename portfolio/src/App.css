@@ -1,10 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .app{
     background-color: #14131A;
-    height: 110%;
-    
+    height: 100%;
 }
 
 .scroll{
-    margin-top: 10vh;
-   
+    /* margin-top: 10vh; */
 }

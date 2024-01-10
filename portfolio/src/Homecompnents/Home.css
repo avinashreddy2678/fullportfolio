@@ -17,9 +17,10 @@
 }
 .images {
   height: 23vh;
-  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaIa8e8kG39oyHMxxbK05qoeAMS_-NESBtBH6Fj4TR7rax_R16");
+  /* background: url("https://www.kowabana.net/wp-content/uploads/2017/12/stairs.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center; */
   position: relative;
   top: 10vh;
   display: flex;
@@ -31,6 +32,7 @@
   display: flex;
   align-items: center;
   height: 100%;
+  
 }
 @media screen and (max-width: 810px) {
   .contactinfo {

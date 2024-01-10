@@ -4,5 +4,9 @@
   font-size: regular;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
-  color: 	#aaa7a7;
+ 
+}
+.myabout p {
+  line-height: 38px;
+  letter-spacing: 2px;
 }
