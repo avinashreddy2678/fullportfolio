@@ -1,11 +1,25 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import Project from "../../Projectindividual/Project";
 import "./Projects.css";
+import axios from "axios";
+import ProjectOne from "../../Projectindividual/newProject";
 function Projects() {
-  useEffect(()=>{
-    document.title=`Projects`
-  },[]);
+  useEffect(() => {
+    document.title = `Projects`;
+  }, []);
+
+  const [allprojects, setprojects] = useState([]);
+  // console.log(allprojects[0]);
+  // // data fromthe database only porjects related
+  // useEffect(() => {
+  //   const fetch = async () => {
+  //     const res = await axios.get("http://localhost:5001/");
+  //     setprojects(res.data);
+  //   };
+  //   fetch();
+  // }, []);
+
   const next = [
     {
       imageurl1: "./assets/ai2.png",
@@ -90,10 +104,8 @@ function Projects() {
           </p>
         </button>
       </div>
-      <h1 className="d-flex h flex-wrap justify-content-center">
-        Projects
-      </h1>
-      <p className="w-100 mt-5 flex justify-center">Using Next.Js</p>
+      <h1 className="d-flex h flex-wrap justify-content-center">Projects</h1>
+      <p className="w-100 mt-5 text-3xl pl-12"> Next.Js</p>
       <div className="singleproject my-2">
         <>
           {next.map((item, index) => (
@@ -101,7 +113,7 @@ function Projects() {
           ))}
         </>
       </div>
-      <p className="w-100 mt-5 flex justify-center">Using MERN Stack</p>
+      <p className="w-100 mt-5 text-3xl pl-12">MERN</p>
       <div className="singleproject my-2">
         <>
           {data.map((item, index) => (

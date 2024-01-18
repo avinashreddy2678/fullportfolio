@@ -21,7 +21,7 @@ const HomeCard = ({ item }) => {
               onClick={() => {
                 window.open(item.live, "_blank");
               }}
-              className="card-actions ml-20 mx-4 lg:mr-10 px-2 py-1 text-white bg-green-600 rounded-lg"
+              className="card-actions ml-20 mx-4 lg:mr-10 px-3 py-2 cursor-pointer hover:bg-green-700 text-white bg-green-600 rounded-lg"
             >
               Live
             </div>

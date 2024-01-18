@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./Home.css";
+
 import { useNavigate } from "react-router-dom";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
 import About from "../../About/About";
@@ -9,12 +10,21 @@ import HomeTech from "./HomeTech";
 import Marquee from "react-fast-marquee";
 import GitHub from "@mui/icons-material/GitHub";
 import LinkedIn from "@mui/icons-material/LinkedIn";
+// import axios from "axios";
+// import { baseurl } from "../../helper";
 function Home() {
+  
   const router = useNavigate();
   useEffect(()=>{
     document.title=`Avinash's`
   },[]);
-  
+  // useEffect(()=>{
+  //   const fetch=async()=>{
+  //       const res= await axios.get('http://localhost:5001/');
+  //       // console.log(res);
+  //   }
+  //   fetch();
+  // },[])
   const data = [
     {
       createdAt: "12:00",
@@ -26,8 +36,8 @@ function Home() {
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRAusOjZJF_V7_0HtgK9QjLgB3J2Jn3KOQjQ&usqp=CAU",
         "https://cdn.iconscout.com/icon/premium/png-512-thumb/react-2752089-2284906.png?f=webp&w=256",
         "https://yt3.googleusercontent.com/UqT_vCkJIn1P2fH1pchr6lbe3xeEekY61h4bUpJkVuityqKOEtUYcNy3pLiJ5OKdj4uKA81FWE8=s900-c-k-c0x00ffffff-no-rj",
-        "https://shorturl.at/gmrTZ",
-        "https://shorturl.at/pyMWY",
+        "https://testrigor.com/wp-content/uploads/2023/04/nextjs-logo-square.png",
+        "https://res.cloudinary.com/practicaldev/image/fetch/s--6ebjy0LI--/c_imagga_scale,f_auto,fl_progressive,h_1080,q_auto,w_1080/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/dxy1c2bvl6odeo52dodk.jpg",
       ],
       github: "https://github.com/avinashreddy2678/AIAssistant",
       live: "https://dub.sh/AI-assistant",
@@ -40,8 +50,8 @@ function Home() {
       techstack: [
         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRAusOjZJF_V7_0HtgK9QjLgB3J2Jn3KOQjQ&usqp=CAU",
         "https://yt3.googleusercontent.com/UqT_vCkJIn1P2fH1pchr6lbe3xeEekY61h4bUpJkVuityqKOEtUYcNy3pLiJ5OKdj4uKA81FWE8=s900-c-k-c0x00ffffff-no-rj",
-        "https://shorturl.at/gmrTZ",
-        "https://shorturl.at/pyMWY",
+        "https://testrigor.com/wp-content/uploads/2023/04/nextjs-logo-square.png",
+        "https://res.cloudinary.com/practicaldev/image/fetch/s--6ebjy0LI--/c_imagga_scale,f_auto,fl_progressive,h_1080,q_auto,w_1080/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/dxy1c2bvl6odeo52dodk.jpg",
       ],
       imageurl1: "./assets/tweet1.png",
       imageurl2: "./assets/tweet2.png",
@@ -56,7 +66,7 @@ function Home() {
   ];
   const sampletech = [
     {
-      imageurl: "https://shorturl.at/pyMWY",
+      imageurl: "https://testrigor.com/wp-content/uploads/2023/04/nextjs-logo-square.png",
       name: "Next.js",
     },
     {
@@ -70,7 +80,7 @@ function Home() {
       name: "MongoDb",
     },
     {
-      imageurl: "https://shorturl.at/gmrTZ",
+      imageurl: "https://res.cloudinary.com/practicaldev/image/fetch/s--6ebjy0LI--/c_imagga_scale,f_auto,fl_progressive,h_1080,q_auto,w_1080/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/dxy1c2bvl6odeo52dodk.jpg",
       name: "Tailwind css",
     },
   ];
@@ -110,18 +120,18 @@ function Home() {
             <div className="img-right ">
               <a
                 href={"./assets/AvinashMamidi.pdf"}
-                className="btn btn-dark px-3 text-gray-500"
+                className="btn btn-dark px-3 text-gray-100 "
                 download={"AvinashMamidi.pdf"}
               >
                 <DownloadIcon color="inherit" />
 
-                <span className=" insta-info px-2 text-gray-500">Resume</span>
+                <span className=" insta-info px-2 text-gray-300">Resume</span>
               </a>
             </div>
           </div>
-          <div className="pt-12 hidden lg:block px-24">
+          <div className="pt-12 hidden lg:block px-24 hover:text-white">
               <button
-              className="button btn text-white px-3"
+              className="button btn text-gray-100 px-1"
               onClick={() => {
                 window.open("https://github.com/avinashreddy2678", "_blank");
               }}
@@ -129,7 +139,7 @@ function Home() {
               <GitHub />
             </button>
             <button
-              className="button btn text-white px-3"
+              className="button btn text-gray-300 px-1"
               onClick={() => {
                 window.open(
                   "https://www.linkedin.com/in/avinash-mamidi-2687782i/",
@@ -149,7 +159,7 @@ function Home() {
               Latest projects...
             </h4>
             <button
-              className="btn mr-10 hover:underline lg:text-md text-xs  text-white"
+              className="btn mr-10 hover:underline lg:text-md text-xs text-white"
               onClick={() => {
                 router("/Projects");
               }}
@@ -168,11 +178,11 @@ function Home() {
 
         <div className="py-3">
           <div className="flex lg:mx-24 mx-3 items-center my-3 justify-between">
-            <h4 className="text-white lg:text-2xl text-sm md:text-md ">
+            <h4 className="text-gray-300 lg:text-2xl text-sm md:text-md ">
               Tech Stack
             </h4>
             <button
-              className="btn mr-10 hover:underline lg:text-md text-xs  text-white"
+              className="btn text-white  mr-10 hover:underline lg:text-md text-xs "
               onClick={() => {
                 router("/TechStack");
               }}
