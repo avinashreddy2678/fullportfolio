@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import ContactMailIcon from "@mui/icons-material/ContactMail";
-
 import "./social.css";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import Twitter from "@mui/icons-material/Twitter";
@@ -9,6 +8,7 @@ import Linkedin from "@mui/icons-material/LinkedIn";
 import SocialCard from "./SocailCard";
 import { Card } from "../UI/TechUI";
 function Social() {
+
   const socialdata=[
     {
       name:"Github",
@@ -25,7 +25,7 @@ function Social() {
     {
       name:"Twitter",
       icon:Twitter,
-      link:"https://www.instagram.com/avinashreddy.2689/",
+      link:"https://www.Twitter.com/avinashreddy.2689/",
       title:"Avinash Mamidi"
     },
     {
@@ -52,6 +52,7 @@ function Social() {
           </button>
         </div>
         <div className="lg:py-28 py-16 text-white">
+        <h1 className="text-gray-500">Connect with Me</h1>
           <Card className="mt-4">
             <div>
               <div className="grid sm:grid md:grid-cols-2 lg:grid-cols-2 gap-6">

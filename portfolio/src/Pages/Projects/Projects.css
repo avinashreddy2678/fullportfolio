@@ -3,12 +3,27 @@
     margin: 4%;
    
   }
-  .singleproject{
-    display: flex;
+  .singleproject {
+    display: grid;
+    grid-column: 2;
     flex-wrap: wrap;
-    margin-left:3% ; 
-    
+    margin-left: 3%;
   }
+  
+  /* For medium screens (e.g., tablets) */
+  @media (max-width: 768px) {
+    .singleproject {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* For small screens (e.g., smartphones) */
+  @media (max-width: 576px) {
+    .singleproject {
+      grid-template-columns: 1fr;
+    }
+  }
+  
   @media screen and (max-width: 920px) {
     .singleproject {
       display: flex;

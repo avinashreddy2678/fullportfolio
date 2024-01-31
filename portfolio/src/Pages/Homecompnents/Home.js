@@ -104,20 +104,20 @@ function Home() {
               <div>
                 <img
                   src="./assets/images.jpeg"
-                  className="rounded-pill bg-contain opacity-20"
+                  className="rounded-pill bg-contain opacity-100"
                   width={"100px"}
                   height={"100px"}
                   alt=""
                 />
               </div>
-              <div className="nameall px-3 text-gray-500">
+              <div className="nameall px-3 text-gray-300">
                 <h2>Avinash_Reddy</h2>
                 <h6 className="name">@avinash</h6>
                 
               </div>
               
             </div>
-            <div className="img-right ">
+            <div className="img-right">
               <a
                 href={"./assets/AvinashMamidi.pdf"}
                 className="btn btn-dark px-3 text-gray-100 "
@@ -131,7 +131,7 @@ function Home() {
           </div>
           <div className="pt-12 hidden lg:block px-24 hover:text-white">
               <button
-              className="button btn text-gray-100 px-1"
+              className="button btn text-gray-50 px-1"
               onClick={() => {
                 window.open("https://github.com/avinashreddy2678", "_blank");
               }}
@@ -139,7 +139,7 @@ function Home() {
               <GitHub />
             </button>
             <button
-              className="button btn text-gray-300 px-1"
+              className="button btn text-gray-100 px-1"
               onClick={() => {
                 window.open(
                   "https://www.linkedin.com/in/avinash-mamidi-2687782i/",
@@ -155,7 +155,7 @@ function Home() {
 
         <div className=" m-auto">
           <div className="flex lg:mx-24 mx-3 items-center my-3 justify-between">
-            <h4 className="text-white lg:text-2xl text-sm md:text-md ">
+            <h4 className="text-white lg:ml-12  lg:text-4xl text-lg md:text-lg ">
               Latest projects...
             </h4>
             <button
@@ -178,7 +178,7 @@ function Home() {
 
         <div className="py-3">
           <div className="flex lg:mx-24 mx-3 items-center my-3 justify-between">
-            <h4 className="text-gray-300 lg:text-2xl text-sm md:text-md ">
+          <h4 className="text-white lg:ml-12  lg:text-4xl text-lg md:text-lg ">
               Tech Stack
             </h4>
             <button
