@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import "./Home.css";
 
 import { useNavigate } from "react-router-dom";
@@ -10,6 +10,7 @@ import HomeTech from "./HomeTech";
 import Marquee from "react-fast-marquee";
 import GitHub from "@mui/icons-material/GitHub";
 import LinkedIn from "@mui/icons-material/LinkedIn";
+import { client } from "../../libs/client";
 // import axios from "axios";
 // import { baseurl } from "../../helper";
 function Home() {
@@ -18,52 +19,15 @@ function Home() {
   useEffect(()=>{
     document.title=`Avinash's`
   },[]);
-  // useEffect(()=>{
-  //   const fetch=async()=>{
-  //       const res= await axios.get('http://localhost:5001/');
-  //       // console.log(res);
-  //   }
-  //   fetch();
-  // },[])
-  const data = [
-    {
-      createdAt: "12:00",
-      imageurl1: "./assets/ai2.png",
-      imageurl2: "./assets/ai1.png",
-      imageurl3: "./assets/ai3.png",
-      imageurl4: "./assets/ai4.png",
-      techstack: [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRAusOjZJF_V7_0HtgK9QjLgB3J2Jn3KOQjQ&usqp=CAU",
-        "https://cdn.iconscout.com/icon/premium/png-512-thumb/react-2752089-2284906.png?f=webp&w=256",
-        "https://yt3.googleusercontent.com/UqT_vCkJIn1P2fH1pchr6lbe3xeEekY61h4bUpJkVuityqKOEtUYcNy3pLiJ5OKdj4uKA81FWE8=s900-c-k-c0x00ffffff-no-rj",
-        "https://testrigor.com/wp-content/uploads/2023/04/nextjs-logo-square.png",
-        "https://res.cloudinary.com/practicaldev/image/fetch/s--6ebjy0LI--/c_imagga_scale,f_auto,fl_progressive,h_1080,q_auto,w_1080/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/dxy1c2bvl6odeo52dodk.jpg",
-      ],
-      github: "https://github.com/avinashreddy2678/AIAssistant",
-      live: "https://dub.sh/AI-assistant",
-      name: "AI_Assistant",
-      overview:
-        "Developed a dynamic web application using Next.js, Tailwind CSS, and Clerk authentication, integrating OpenAI for advanced natural language processing. Key features include real-time chat with the AI model and image generation based on user prompts. Achieved seamless user interaction, responsive design, and secure authentication.",
-    },
-    {
-      createdAt: "11",
-      techstack: [
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRAusOjZJF_V7_0HtgK9QjLgB3J2Jn3KOQjQ&usqp=CAU",
-        "https://yt3.googleusercontent.com/UqT_vCkJIn1P2fH1pchr6lbe3xeEekY61h4bUpJkVuityqKOEtUYcNy3pLiJ5OKdj4uKA81FWE8=s900-c-k-c0x00ffffff-no-rj",
-        "https://testrigor.com/wp-content/uploads/2023/04/nextjs-logo-square.png",
-        "https://res.cloudinary.com/practicaldev/image/fetch/s--6ebjy0LI--/c_imagga_scale,f_auto,fl_progressive,h_1080,q_auto,w_1080/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/dxy1c2bvl6odeo52dodk.jpg",
-      ],
-      imageurl1: "./assets/tweet1.png",
-      imageurl2: "./assets/tweet2.png",
-      imageurl3: "./assets/tweet3.png",
-      imageurl4: "./assets/tweet4.png",
-      github: "https://github.com/avinashreddy2678/newtwitter",
-      live: "https://dub.sh/tweetnow",
-      name: "Tweet_Now",
-      overview:
-        "Tweet_Now is a simplified Twitter clone built using Next.js, a React framework for building server-rendered React applications. The project aims to replicate some of the core features of Twitter, allowing users to post tweets, follow other users, and view a of tweets from people",
-    },
-  ];
+  
+
+  const [allprojects,setprojects]=useState([]);
+  useEffect(()=>{
+    client.fetch(`*[_type=="Latest"]{
+      name,overview,github,live,imageurl1,TechStack
+    }`).then((data)=>setprojects(data)).catch(console.error)
+  },[])
+
   const sampletech = [
     {
       imageurl: "https://testrigor.com/wp-content/uploads/2023/04/nextjs-logo-square.png",
@@ -168,9 +132,12 @@ function Home() {
             </button>
           </div>
           <div className=" lg:flex block lg:justify-evenly">
-            {data.map((item, index) => (
+            {allprojects.length>0 && allprojects.map((item, index) => (
               <div key={index + item} className="lg:my-6 my-12">
-                <HomeCard item={item} />
+                {
+                   (<HomeCard item={item} />)
+                }
+                
               </div>
             ))}
           </div>
